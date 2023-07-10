@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abrar Galib Zaman</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/assets/Logo.jpeg" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> </script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init("qDqOtbjPWrqiVOXD0");
+   })();
+</script>
+</head>
+
+<body>
+  <section id="landing-page" onmousemove="moveBackground(event)">
+    <nav>
+      <figure>
+        <img id="personal-logo" src="./assets/Logo.jpeg" alt="">
+      </figure>
+      <ul class="nav__link--list">
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Projects</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          "><i class="fas fa-adjust"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="title">Hey</h1>
+        <h1 class="title orange">I'm Abrar.</h1>
+        <p class="header__para">
+          I'm a passionate<b class="orange"> 3rd year Computer Engineering student,</b> 
+          driven by my love for web development. With a focus on creating impactful websites,
+          I strive to craft responsive designs that have a positive influence on the world.
+          <br>
+          Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>.
+        </p>
+        <div class="social__list">
+          <a href="https://www.linkedin.com/in/david-bragg-5b23a1176/" target="_blank" class="social__link click">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/davidbr4gg" target="_blank" class="social__link click">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="./assets/David Bragg Resume.pdf" target="_blank" class="social__link click">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </a>
+    <a href="#projects" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">3rd Year Computer Engineering Student.</h4>
+        <p class="modal__para">
+          As a 19-year-old <b class="orange">computer engineering student</b> with a passion for web development, I bring a diverse skill set to the table.
+          Proficient in <b class="orange">HTML</b>, <b class="orange">Java</b>, <b class="orange">CSS</b>, <b class="orange">TypeScript</b>,
+          and <b class="orange">React</b>, I have honed my expertise through hands-on projects.
+          Although I may lack real-life work experience, my extensive portfolio demonstrates my commitment to delivering
+          exceptional results. With a hunger for knowledge and a drive to excel,
+          I am eager to apply my talents in a professional setting and make a meaningful impact.
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt="">
+            <span class="language__name">HTML</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+              alt="">
+            <span class="language__name">CSS</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+              alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png" alt="">
+            <span class="language__name">TypeScript</span>
+          </figure>
+
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+              alt="">
+            <span class="language__name">React</span>
+          </figure>
+          
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+          Let's have a chat!
+        </h3>
+        <h3 class="modal__sub-title modal__sub-title--contact">
+          I'm currently open to new opportunities.
+        </h3>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user_email" type="email" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">
+            Send it my way
+          </button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! Looking forward to speaking to you soon.
+        </div>
+      </div>
+    </div>
+    <img src="./assets/semi circle.svg" class="shape shape--0">
+    <img src="./assets/circle.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2">
+    <img src="./assets/circle.svg" class="shape shape--3">
+    <img src="./assets/triangle.svg" class="shape shape--4">
+    <img src="./assets/circle.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/circle.svg" class="shape shape--7">
+    <img src="./assets/semi circle.svg" class="shape shape--8">
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title">
+          Here are some of my <span class="orange">projects</span>
+        </h1>
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Car Rescue App.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Car Rescue Application Project
+                </h3>
+                <h4 class="project__description--sub-title">
+                  HTML, SCSS, TypeScript
+                </h4>
+                <p class="project__description--para">
+                  Our groundbreaking car rescue app, developed using the cutting-edge Ionic framework and Angular components. 
+                  With a perfect blend of HTML, SCSS, and TypeScript, our app's meticulously crafted design ensures a seamless 
+                  and intuitive user experience. Our team's expertise in leveraging Ionic's rich library of components has 
+                  resulted in an eye-catching app that seamlessly integrates with various mobile platforms, providing a visually 
+                  striking representation of our skills and capabilities. The use of dynamic animations and appealing color 
+                  schemes in our car rescue app project adds an element of excitement and close to professionalism, making it 
+                  innovative and visually engaging. By employing Ionic's responsive design capabilities, our app delivers an 
+                  immersive and visually compelling experience across different screen sizes, leaving users in awe of our 
+                  ability to create captivating user interfaces that adapt flawlessly to any device.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/AbrarZaman/Car-Rescue-Application" target="_blank" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Hospital.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Nearest Hospital Application
+                </h3>
+                <h4 class="project__description--sub-title">
+                  HTML, SCSS, TypeScript
+                </h4>
+                <p class="project__description--para">
+                  I have developed a highly functional nearest hospital application using Ionic framework and angular components. 
+                  The nearest hospital application I developed is a remarkable tool for emergency situations. It utilizes 
+                  advanced geolocation technology to track users' locations accurately, connecting them with nearby hospitals 
+                  quickly. Integrated with Google Maps, the app offers interactive maps and efficient route planning for seamless
+                  navigation. Users can also filter hospitals based on ratings, making informed decisions about the quality of care.
+                  With its array of essential features, this application revolutionizes access to emergency medical assistance, ensuring
+                  improved response times and user safety. It is a highly functional and indispensable tool in critical moments.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/AbrarZaman/Nearest-Hospital-Application" target="_blank" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Library Project.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Library Application
+                </h3>
+                <h4 class="project__description--sub-title">
+                  HTML, CSS, JavaScript, React
+                </h4>
+                <p class="project__description--para">
+                  The Library app is an impressive sample library website developed using React. It demonstrates expertise 
+                  in front-end web development and showcases user-friendly interfaces. With dynamic sorting and filtering 
+                  options, the project highlights technical proficiency. It includes the ability to add books to a shopping cart,
+                   utilizing React's component-based architecture, responsive design, and state management capabilities. The 
+                   elegant design incorporates CSS styles and custom animations. Overall, the Library Portfolio Project 
+                   exemplifies captivating and user-friendly websites built with React, offering a seamless shopping experience 
+                   for users.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/AbrarZaman/Library-App-Using-React" target="_blank" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                    <a href="https://chivalrous-mint.surge.sh/" target="_blank" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Tesla Clone Project.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Tesla Clone Project
+                </h3>
+                <h4 class="project__description--sub-title">
+                  HTML, CSS, JavaScript, React, Redux
+                </h4>
+                <p class="project__description--para">
+                  Introducing my Tesla Clone project, a visually captivating web application crafted using HTML, CSS, JavaScript,
+                   React, and Redux. This project allows users to browse through a stunning collection of Tesla cars, each 
+                   presented with detailed information and captivating images. Leveraging React and Redux, I've designed a 
+                   responsive and user-friendly interface that offers seamless navigation and an engaging browsing experience. 
+                   Whether you're a Tesla enthusiast or simply curious about electric vehicles, this clone project demonstrates 
+                   my proficiency in front-end development and showcases my ability to deliver visually appealing web applications. 
+                   Immerse yourself in the world of Tesla with my Tesla Clone and embark on a virtual journey through their extraordinary 
+                   lineup of cars.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/AbrarZaman/Tesla-Clone-Project" target="_blank" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                    <a href="https://resolute-breakfast.surge.sh/" target="_blank" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Netflix Clone Project.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Netflix Clone Project
+                </h3>
+                <h4 class="project__description--sub-title">
+                  HTML, CSS, JavaScript, React
+                </h4>
+                <p class="project__description--para">
+                  In my portfolio, I am proud to present my Netflix clone project, developed using HTML, CSS, JavaScript, and
+                   React. This project showcases a range of captivating features, starting with an active navbar that closely 
+                   resembles the original Netflix interface, providing seamless navigation. With three distinct pages - Home, TV 
+                   shows, and Movies - users can explore an extensive collection of content. By clicking on any movie thumbnail, 
+                   users can instantly watch its trailer, and the video can be closed with a simple click on the thumbnail. The 
+                   clone also includes a diverse range of categories, offering an immersive experience similar to the real 
+                   Netflix platform. Dive into this Netflix clone to witness the integration of HTML, CSS, JavaScript, and React 
+                   in action!
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/AbrarZaman/Netflix-Clone-Project" target="_blank" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                    <a href="https://netflix-clone-project-liard.vercel.app/" target="_blank" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+          <figure class="footer__logo">
+            <img src="./assets/Logo.jpeg" class="footer__logo--img" alt="">
+          </figure>
+          <span class="footer__logo--popper">
+            Top
+            <i class="fas fa-arrow-up"></i>
+          </span>
+        </a>
+        <div class="footer__social--list">
+          <a href="https://github.com/AbrarZaman" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/abrar-galib-z-71249a131/" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            LinkedIn
+          </a>
+          <a href="#" onclick="toggleModal()" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <a href="./assets/David Bragg Resume.pdf" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2023 Abrar Galib Zaman</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
